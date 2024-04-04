@@ -15,7 +15,9 @@ SRC = main.c
 # 빌드 규칙 설정
 all: $(TARGET)
 
-$(TARGET): $(SRC)
+
+$(TARGET):
+    $(SRC)
     $(CC) $(CFLAGS) -o $(TARGET) $(SRC)
 
 # 정리 규칙 설정
