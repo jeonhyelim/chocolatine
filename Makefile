@@ -15,7 +15,7 @@ TARGET = main
 all: $(NAME)
 
 $(NAME): $(OBJ)
-        $(CC) $(CFLAGS) -o $(NAME) $(OBJ)
+    $(CC) $(CFLAGS) -o $(NAME) $(OBJ)
 
 clean:
     rm -f $(OBJ)
