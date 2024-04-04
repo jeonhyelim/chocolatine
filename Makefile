@@ -1,25 +1,28 @@
 # Makefile
+NAME = chocolatine
 
-# 컴파일러 지정
+SRC = ./main.c
+
+OBJ = $(SRC:.c=.o)
+
 CC = gcc
 
-# 컴파일 옵션 설정
 CFLAGS = -Wall -Wextra
 
-# 빌드 대상 지정 (실행 파일 이름)
 TARGET = main
 
-# 소스 파일 지정
-SRC = main.c
 
-# 빌드 규칙 설정
-all: $(TARGET)
+all: $(NAME)
 
+$(NAME): $(OBJ)
+    $(CC) $(CFLAGS) -o $(NAME) $(OBJ)
 
-$(TARGET):
-    $(SRC)
-    $(CC) $(CFLAGS) -o $(TARGET) $(SRC)
-
-# 정리 규칙 설정
 clean:
-    rm -f $(TARGET)
+    rm -f $(OBJ)
+
+fclean: clean
+    rm -f $(NAME)
+
+re: fclean all
+
+.PHONY: all clean fclean re
