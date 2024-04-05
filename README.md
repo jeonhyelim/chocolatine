@@ -21,5 +21,8 @@ Pushing to the Mirror Repository:
 
 <br/><br>
 The result:
+<img width="1310" alt="스크린샷 2024-04-05 오후 1 54 05" src="https://github.com/jeonhyelim/chocolatine/assets/114721039/cffe5cc1-6c25-4bcb-a8bc-88408418cbee">
 
+
+<img width="1308" alt="스크린샷 2024-04-05 오후 1 56 41" src="https://github.com/jeonhyelim/chocolatine/assets/114721039/34f374c3-54df-488f-b1b2-8caa3a043c8a">
 Success!
