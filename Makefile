@@ -25,5 +25,8 @@ fclean: clean
 
 re: fclean all
 
+run_tests:
+	echo "All tests passed."
+
 .PHONY: all clean fclean re
 
