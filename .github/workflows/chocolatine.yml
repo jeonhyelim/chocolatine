@@ -24,20 +24,7 @@ jobs:
           fetch-depth: 0
       - name: Run Coding Style Checker
         run: check.sh $(pwd) $(pwd) > coding-style-report.log
-      # - name: Display Coding Style Errors
-      #   run: |
-      #     while IFS= read -r line; do
-      #       file=$(echo "$line" | cut -d ':' -f 1)
-      #       line_number=$(echo "$line" | cut -d ':' -f 2)
-      #       error_message=$(echo "$line" | cut -d ':' -f 3-)
-      #       echo "::error file=$file,line=$line_number::$error_message"
-      #     done < coding-style-report.log
-      # - name: Fail Job if Errors Exist
-      #   run: |
-      #     if [ -s coding-style-report.log ]; then
-      #       exit 1
-      #     fi
-
+      
 
   check_program_compilation:
     runs-on: ubuntu-latest
@@ -58,7 +45,6 @@ jobs:
               exit 1
             fi
           done
-      # - run: for i in $EXECUTABLES; do if [ ! -x $i ]; then exit 1; fi; done
 
 
   run_tests:
